@@ -1,48 +1,33 @@
 # SMART_STICK_FOR_VISION_CHALLENEGED
 
-# Smart Stick Monitoring System with GPS Monitoring on Blynk
+# Smart Stick System
 
-This project implements a Smart Stick Monitoring System using an ESP32 microcontroller and a GPS module. It sends GPS data to the Blynk app for real-time tracking and monitoring.
+![Smart Stick System](images/smart_stick_system.jpg)
 
-## Hardware Requirements
+## Overview
+The Smart Stick System is an IoT-based project designed to assist visually impaired individuals in navigating their surroundings safely. This project utilizes an ESP32 microcontroller, various sensors, Blynk app integration, GPS tracking, and a Telegram bot for remote monitoring and alerts.
 
-- ESP32 WROOM-DA-MODULE
-- GPS Module (e.g., NEO-6M)
-- USB Cable for ESP32 Programming
-- Smartphone with Blynk App Installed
+## Features
+- GPS tracking for location monitoring
+- Distance sensing using ultrasonic sensor
+- Moisture sensing for detecting wet surfaces
+- SOS alert feature via Telegram bot
 
-## Software Requirements
-
-- Arduino IDE
-- Blynk App (available for Android and iOS)
+## Prerequisites
+- Arduino IDE for ESP32 development
+- Blynk app installed on your smartphone
+- Access to a Telegram bot token for messaging
 
 ## Setup Instructions
+1. Clone or download this repository to your local machine.
+2. Open the Arduino IDE and load the `GPS_GMAPS.ino` sketch.
+3. Update the necessary configurations such as Wi-Fi credentials, Blynk auth token, and Telegram bot token.
+4. Connect the ESP32 board to your computer and upload the sketch.
+5. Install the Blynk app on your smartphone and configure it with the provided Blynk Template ID.
+6. Power up the Smart Stick System and monitor sensor data through the Blynk app.
 
-1. Clone or download the repository to your local machine.
-2. Open the Arduino IDE and install the necessary libraries:
-   - WiFiClient
-   - BlynkSimpleEsp32
-   - TinyGPS++
-3. Modify the following in the code (`smart_stick_monitor.ino`):
-   - WiFi SSID and Password (`ssid` and `pass` variables)
-   - Blynk Template ID, Name, and Authentication Token (`BLYNK_TEMPLATE_ID`, `BLYNK_TEMPLATE_NAME`, `BLYNK_AUTH_TOKEN` variables)
-   - GPS Serial Pins (`RXD2` and `TXD2` pins)
-4. Connect the ESP32 board to your computer using the USB cable.
-5. Select the appropriate board and port in the Arduino IDE.
-6. Upload the code (`smart_stick_monitor.ino`) to the ESP32 board.
-7. Open the Blynk app on your smartphone and load the corresponding project using the Template ID.
+## Feedback and Support
+If you have any feedback, questions, or need support, please open an issue in this repository or [contact us](mailto:vishnurajeshkumar2002@gmail.com).
 
-## Usage
+Enjoy building and exploring the Smart Stick System!
 
-1. Power on the ESP32 board and GPS module.
-2. Launch the Blynk app on your smartphone.
-3. Monitor the GPS data (latitude, longitude, speed) on the Blynk app in real-time.
-4. Use the provided virtual pins (`V0`, `V1`, `V2`, `V3`) in the Blynk app for displaying GPS data and map links.
-
-## Contributing
-
-Contributions to improve this project are welcome. You can fork the repository, make your changes, and create a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
